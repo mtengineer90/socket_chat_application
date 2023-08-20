@@ -78,7 +78,7 @@ class LoginScreen extends StatelessWidget {
                         backgroundColor: primaryColor,
                       ),
                         onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => const ChatScreen()));
+                          Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => ChatScreen(name: userNameController.text.toString(),)));
                         },
                         child: const Text(
                           'Login',
