@@ -1,7 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import '../utils/constants.dart';
+import 'chat_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   final userNameController = TextEditingController();
@@ -79,9 +78,7 @@ class LoginScreen extends StatelessWidget {
                         backgroundColor: primaryColor,
                       ),
                         onPressed: () {
-                          if (kDebugMode) {
-                            print(userNameController.text);
-                          }
+                          Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => const ChatScreen()));
                         },
                         child: const Text(
                           'Login',
