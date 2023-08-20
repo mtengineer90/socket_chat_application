@@ -2,6 +2,9 @@
 
 Socket Chat Mobile Application
 
+SocketsBay Test WebSockets:
+[https://socketsbay.com/test-websockets]
+
 
 Branches:
 - dev : For Development Purpose
