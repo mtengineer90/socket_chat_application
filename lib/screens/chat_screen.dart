@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:socket_chat_application/utils/constants.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 import '../controller/chat_controller.dart';
 
@@ -31,6 +32,16 @@ class _ChatScreenState extends State<ChatScreen> {
                 StreamBuilder(
                   stream: chatController.channel.stream,
                   builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return Center(
+                          child: CircularProgressIndicator(color: primaryColor,));
+                    }
+                    if (snapshot.hasError) {
+                      return Text(
+                        'ERROR: ${snapshot.error}',
+                        style: const TextStyle(color: Colors.red),
+                      );
+                    }
                     return Text(snapshot.hasData ? '${snapshot.data}' : '', style: Theme.of(context).textTheme.bodyLarge,);
                   },
                 )
