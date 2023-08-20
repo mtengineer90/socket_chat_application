@@ -16,7 +16,7 @@ Packages:
 
 
 Screenshots:
-![login](https://github.com/mtengineer90/socket_chat_application/assets/61827071/30c73192-9537-4d24-9ea7-b9891a1b18ee | width=100)
+![login](https://github.com/mtengineer90/socket_chat_application/assets/61827071/30c73192-9537-4d24-9ea7-b9891a1b18ee)
 ![chat](https://github.com/mtengineer90/socket_chat_application/assets/61827071/c5b62eb1-e514-4649-81c5-5c727226f4e5)
 
 
